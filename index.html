@@ -115,9 +115,15 @@
 <p>아래와 같이 Generate와 Deploy를 동시에 실행 할 수도 있다</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy --generate</span><br></pre></td></tr></table></figure>
 
-<p>배포가 완료가 되면 브라우저에서 purplepumpkin.github.io로 접속해 정상적으로 배포가 되었는지 확인한다.</p>
-<p>간혹 hexo의 deploy기능을 통해 정상적으로 배포가 되었음에도 불구하고 페이지가 업데이트 되지 않는 현상이 있는데, 이 경우에는 아래와 같이 페이지를 clean후에 배포를 하면 해결된다.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo deploy --generate</span><br></pre></td></tr></table></figure>
+<p>배포가 완료가 되면 브라우저로 purplepumpkin.github.io 확인.</p>
+<h3 id="관련-오류-수정"><a href="#관련-오류-수정" class="headerlink" title="관련 오류 수정"></a>관련 오류 수정</h3><ol>
+<li>Theme를 변경하고 배포시에 적용이 되지 않는 이슈, Hexo를 clean 하고 재배포를 합니다.<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo deploy --generate</span><br></pre></td></tr></table></figure></li>
+<li>배포시에 ERROR Deployer not found: git 에러<br>hexo-deployer-git 플러그인 설치<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+_config.yml에 플러그인 설정<br>plugins:</li>
+</ol>
+<ul>
+<li>hexo-deployer-git</li>
+</ul>
 
       
     </div>
